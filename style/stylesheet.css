@@ -1,0 +1,33 @@
+* {
+    outline: solid 1px black;
+}
+
+header {
+    text-align: center;
+    
+}
+
+.instructions {
+    margin-top: 5%; margin-bottom: 5%;
+
+}
+
+.testimonials {
+    margin-top: 5%; margin-bottom: 5%;
+
+}
+
+.outerBox {
+    max-width: 100; height: auto;
+    padding: 10%;
+    margin-bottom: 30px;
+}
+
+button {
+    background-color: red;
+    text-align: center;
+}
+
+#button {
+    text-align: center;
+}
