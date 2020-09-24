@@ -6,7 +6,7 @@ var alphabetHigher = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O
 var numbers = [0,1,2,3,4,5,6,7,8,9];
 var characters = ["!","@","#","$","%","^","&","*"];
 var passLengthString = 8 //just for now
-
+var passLengthInteger = 8 //just for now
 // choose function var go here
 
 var aLChoice = 0
@@ -36,8 +36,9 @@ function charChoose(){
 
 
 function generatePassQuestions(){
-    var passLengthString = prompt("How long would you like your password to be? Must be between 8 and 128 characters");
-        // passLengthInteger = parseInt(passLengthString,10);
+    var passLengthString = parseInt(prompt("How long would you like your password to be? Must be between 8 and 128 characters"));
+        console.log(passLengthString)
+        // passLengthInteger = parseInt(passLengthString,10); // I'm not sure why this doesnt work
         passLengthInteger = passLengthString
         console.log(passLengthInteger);
         passLow = confirm("Use lowercase letters?");
