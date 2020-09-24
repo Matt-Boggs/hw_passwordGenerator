@@ -37,28 +37,31 @@ function charChoose(){
 
 function generatePassQuestions(){
     var passLengthString = prompt("How long would you like your password to be? Must be between 8 and 128 characters");
-        passLengthString = parseInt(passLengthString,10);
-        console.log(passLengthString);
+        // passLengthInteger = parseInt(passLengthString,10);
+        passLengthInteger = passLengthString
+        console.log(passLengthInteger);
         passLow = confirm("Use lowercase letters?");
         passHigh = confirm("Use uppercase letters?");
         passNum = confirm("Use numeric characters?");
         passSpec = confirm("Use special characters?")
 
-    if (passLengthString < 8 || passLengthString > 128){
+        // (passLengthString === null)"You must enter a number between 8 and 128"
+    if (passLengthInteger === null){
+            alert("You must enter a number between 8 and 128");
+            generatePassQuestions()
+        }
+    else if (passLengthInteger < 8 || passLengthInteger > 128){
             alert("Password must be between 8 and 128 characters")
             generatePassQuestions()
-        } else if (passLengthString === Null){
-            alert("You must enter a number between 8 and 128")
-            generatePassQuestions()
-        } else if (passLow === false && passHigh === false && passNum === false && passSpec === false){
+        }
+    else if (passLow === false && passHigh === false && passNum === false && passSpec === false){
             alert("You must choose at least one type of character for your password")
             generatePassQuestions();
-        } else {
-            generatePassActual();
         }
-    
-    
-
+    else (generatePassActual())
+        
+        
+        
 }
 
 // just putting these here so i dont have to scroll for now
@@ -85,7 +88,8 @@ numChoose()
 console.log(numChoice)
 charChoose()
 console.log(charChoice)
-
+ 
+generatePassQuestions()
 
 
 // var button = document.getElementById("buttonActual").addEventListener("click", function()
