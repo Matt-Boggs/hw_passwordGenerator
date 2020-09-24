@@ -47,7 +47,7 @@ function generatePassQuestions(){
     if (passLengthString < 8 || passLengthString > 128){
             alert("Password must be between 8 and 128 characters")
             generatePassQuestions()
-        } else if (passLengthString === NaN){
+        } else if (passLengthString === Null){
             alert("You must enter a number between 8 and 128")
             generatePassQuestions()
         } else if (passLow === false && passHigh === false && passNum === false && passSpec === false){
@@ -61,9 +61,14 @@ function generatePassQuestions(){
 
 }
 
+// just putting these here so i dont have to scroll for now
+// passLow passHigh passNum passSpec
+
 function generatePassActual(){
     for ( i = 0; i < passLengthString; i++) {
         
+        // how to store this functions choice for each i
+        // maybe an array that this function pushes to each time it runs?
         // [i[x]]  ??
 
 
