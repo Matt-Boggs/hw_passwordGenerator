@@ -22,9 +22,9 @@ var numChoice = 0;
 var charChoice = 0;
 
 // 
-var passFinal = [];
+var passFinalArr = [];
 var passFinal = "";
-var output = document.getElementById("output").textContent
+var output = document.getElementById("output")
 // concatenate, it's a wonderful phrase, it means no worries for the rest of your days
 
 // these choose a random number to use as an index position to pull a char from
@@ -94,26 +94,26 @@ function generatePassActual(){
     for ( i = 0; i < passLengthString; i++) {
 
         if (passLow === true){
-            aLChoose();
-            return aLChoice;
+            passFinalArr = passFinalArr.concat(alphabetLower);
         }
         else if (passHigh === true){
-            aHChoose();
-            return aHChoice;
+            passFinalArr = passFinalArr.concat(alphabetHigher);
         }
         else if (passNum === true){
-            numChoose();
-            return numChoice;
+            passFinalArr = passFinalArr.concat(numbers);
         }
-        if (passSpec === true){
-            charChoose();
-            return charChoice;
+        else if (passSpec === true){
+            passFinalArr = passFinalArr.concat(characters);
         }
+        else {
+            passFinal = passFinal + passFinalArr[Math.floor(Math.random() * passFinalArr.length)];
+            return passFinal;
+        }
+
+       
        
         
-        // how to store this functions choice for each i
-        // maybe an array that this function pushes to each time it runs?
-        // [i[x]]  ??
+  
 
 
 
@@ -137,6 +137,7 @@ console.log(charChoice)
 
 var button = document.getElementById("buttonActual").addEventListener("click", function(){
     generatePassQuestions();
+    output = passFinal;
 })
    
 
