@@ -1,5 +1,5 @@
 * {
-    outline: solid 5px black;
+    /* outline: solid 5px black; */ /* This was just being used for the initial design and layout of the page*/
 }
 
 header {
@@ -9,30 +9,34 @@ header {
 
 .instructions {
     margin-top: 5%; margin-bottom: 5%;
-    outline:solid 5px cadetblue;
+    font-family: 'Oswald', sans-serif;
+
+    /* outline:solid 5px cadetblue; */
 }
 
 .testimonials {
     margin-top: 5%; margin-bottom: 5%;
-    outline:solid 5px chartreuse;
+    font-family: 'Oswald', sans-serif;
+
+    /* outline:solid 5px chartreuse; */
 }
 
 .outerBox {
     /* max-width: 100%; height: auto; */
     padding: 3%;
     margin-bottom: 30px;
-    outline:solid 5px red;
+    /* outline:solid 5px red; */
 }
 
 h3 {
-
+    font-family: 'Anton', sans-serif;
 }
 
 .innerBox {
     /* padding: 20%, 50%, 20%, 50%; */
     padding-top: 4%; padding-bottom: 4%;
     text-align: center;
-    outline:solid 5px blue;
+    /* outline:solid 5px blue; */
 }
 
 button {
